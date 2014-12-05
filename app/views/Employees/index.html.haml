@@ -1,0 +1,20 @@
+%h1 Employees#index
+%p="Employees from " + @department.name + " department" 
+%table#Employees
+  %thead
+    %tr
+      %th name
+      %th description
+      %th abudget
+      %th more actions
+    %tbody
+      - @Employees.each do |Employee|
+        %tr
+          %td= Employee.name
+          %td= course.sex
+          %td= course.phone
+          %td= course.hdate
+          %td= course.salary
+          %td= link_to "Edit employee information", edit_department_employee_path(employee.department, employee)
+=link_to 'Add new employee', new_department_employee_path(@department)
+

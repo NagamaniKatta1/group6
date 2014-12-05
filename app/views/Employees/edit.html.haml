@@ -1,0 +1,15 @@
+%h1 Employees#edit
+%p Find me in app/views/Employees/edit.html.haml
+%h2 Editing Employees
+= form_tag department_Employees_path(Employee_id: @Employee.id), :method => :put do
+  = label :Employee, :name, 'Name'
+  = text_field :Employee, :name
+  = label :Employee, :sex, 'Sex'
+  = text_field :Employee, :sex
+  = label :Employee, :phone, 'Phone'
+  = text_field :Employee, :phone
+  = label :Employeee, :hdate, 'Hdate'
+  = text_field :Employee, :hdate
+  = label :Employee, :salary, 'Salary'
+  = text_field :Employee, :salary
+  = submit_tag 'Save changes'

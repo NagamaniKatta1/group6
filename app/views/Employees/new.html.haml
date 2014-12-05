@@ -1,0 +1,16 @@
+%h1 Employees#new
+%p 
+="Adding a new Employee to " + @department.name + " department" 
+%h2 Create a new Employee
+= form_tag department_Employees_path(@department), :method => :post do
+   = label :Employee, :name, 'Name'
+  = text_field :Employee, :name
+  = label :Employee, :sex, 'Sex'
+  = text_field :Employee, :sex
+  = label :Employee, :phone, 'Phone'
+  = text_field :Employee, :phone
+  = label :Employeee, :hdate, 'Hdate'
+  = text_field :Employee, :hdate
+  = label :Employee, :salary, 'Salary'
+  = text_field :Employee, :salary
+  = submit_tag 'Save changes'
